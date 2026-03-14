@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Mortgage Calculator | Monthly Payment &amp; Interest | FinCalcHub</title>
+  <meta name="description" content="Calculate your monthly mortgage payment instantly. See principal, interest, and total cost. Free mortgage calculator with complete payment breakdown — no signup needed.">
+  <meta name="keywords" content="mortgage calculator, monthly mortgage payment calculator, home loan calculator, mortgage payment estimator, house payment calculator">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="FinCalcHub">
+  <link rel="canonical" href="https://fincalchub.github.io/mortgage-calculator.html">
+  <meta property="og:title" content="Free Mortgage Calculator | Monthly Payment &amp; Interest | FinCalcHub">
+  <meta property="og:description" content="Calculate your monthly mortgage payment instantly. See principal, interest, and total cost with our free home loan calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincalchub.github.io/mortgage-calculator.html">
+  <meta property="og:image" content="https://fincalchub.github.io/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Mortgage Calculator | FinCalcHub">
+  <meta name="twitter:description" content="Calculate your monthly mortgage payment instantly. Free home loan calculator with complete payment breakdown.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Mortgage Calculator",
+    "description": "Calculate your monthly mortgage payment, total interest, and full loan cost.",
+    "url": "https://fincalchub.github.io/mortgage-calculator.html",
+    "applicationCategory": "FinanceApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "provider": { "@type": "Organization", "name": "FinCalcHub" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a good mortgage interest rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A good mortgage rate depends on the current market. Historically, rates below 4% are considered excellent. In 2024–2026, rates in the 6–7% range are typical for 30-year fixed mortgages. Always compare multiple lenders to get the best rate." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much house can I afford?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A common guideline is to spend no more than 28% of your gross monthly income on housing costs (mortgage, taxes, insurance). Many lenders use a 43% debt-to-income ratio as the maximum for loan approval." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between principal and interest?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Principal is the original loan amount borrowed. Interest is the fee charged by the lender for borrowing that money, expressed as an annual percentage rate (APR). Each monthly payment covers both principal reduction and interest charges." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the down payment affect my mortgage payment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A larger down payment reduces your loan principal, lowering your monthly payment and total interest paid. A 20% down payment also eliminates Private Mortgage Insurance (PMI), which typically costs 0.5–1% of the loan annually." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is PMI (Private Mortgage Insurance)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "PMI is insurance that protects the lender if you default on your loan. It's required when your down payment is less than 20% of the home's purchase price. PMI typically costs 0.5%–1% of the loan amount per year and can be removed once you reach 20% equity." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">F</div>
+          <span class="logo-text">Fin<span>Calc</span>Hub</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mortgage-calculator.html" class="active">Mortgage</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan</a></li>
+            <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+            <li><a href="retirement-calculator.html">Retirement</a></li>
+            <li><a href="debt-payoff-calculator.html">Debt Payoff</a></li>
+            <li><a href="savings-calculator.html">Savings</a></li>
+            <li><a href="bmi-calculator.html">BMI</a></li>
+            <li><a href="budget-planner.html">Budget</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="mortgage-calculator.html">🏠 Mortgage Calculator</a></li>
+        <li><a href="car-loan-calculator.html">🚗 Car Loan Calculator</a></li>
+        <li><a href="compound-interest-calculator.html">📈 Compound Interest</a></li>
+        <li><a href="retirement-calculator.html">🏖️ Retirement Calculator</a></li>
+        <li><a href="debt-payoff-calculator.html">💸 Debt Payoff</a></li>
+        <li><a href="credit-card-payoff-calculator.html">💳 Credit Card Payoff</a></li>
+        <li><a href="savings-calculator.html">💰 Savings Calculator</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI Calculator</a></li>
+        <li><a href="budget-planner.html">📊 Budget Planner</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="ad-container ad-header">
+    <div class="ad-placeholder">Advertisement</div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Mortgage Calculator</h1>
+        <p>Calculate your monthly home loan payment, total interest, and full mortgage cost in seconds.</p>
+      </div>
+    </section>
+
+    <section class="calc-section">
+      <div class="container">
+        <div class="calc-layout">
+          <!-- Calculator Input -->
+          <div class="calc-box">
+            <div class="calc-box-header"><h2>🏠 Enter Loan Details</h2></div>
+            <div class="calc-box-body">
+              <form id="mortgage-form" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="home-price">Home Price</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="home-price" class="form-control has-prefix" placeholder="350,000" min="1" step="1000" value="350000">
+                  </div>
+                  <div class="error-msg" id="home-price-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="down-payment">Down Payment</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="down-payment" class="form-control has-prefix" placeholder="70,000" min="0" step="1000" value="70000">
+                  </div>
+                  <div class="form-hint">20% = $70,000 (avoids PMI)</div>
+                  <div class="error-msg" id="down-payment-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="interest-rate">Annual Interest Rate</label>
+                  <div class="input-group">
+                    <input type="number" id="interest-rate" class="form-control has-suffix" placeholder="6.5" min="0.1" max="30" step="0.1" value="6.5">
+                    <span class="input-suffix">%</span>
+                  </div>
+                  <div class="error-msg" id="interest-rate-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="loan-term">Loan Term</label>
+                  <select id="loan-term" class="form-control">
+                    <option value="30" selected>30 years</option>
+                    <option value="20">20 years</option>
+                    <option value="15">15 years</option>
+                    <option value="10">10 years</option>
+                  </select>
+                  <div class="error-msg" id="loan-term-error"></div>
+                </div>
+                <button type="submit" class="calc-btn">Calculate Mortgage Payment</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div>
+            <div class="results-box" id="mortgage-result" style="display:none;">
+              <!-- Results populated by JS -->
+            </div>
+            <div id="mortgage-placeholder" class="results-box" style="text-align:center;color:var(--gray-500);padding:3rem 1.75rem;">
+              <div style="font-size:3rem;margin-bottom:1rem;">🏠</div>
+              <p style="margin:0;">Enter your loan details and click <strong>Calculate</strong> to see your monthly payment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD SLOT 2 -->
+    <div class="ad-container ad-inline" style="text-align:center;padding:1.5rem 0;">
+      <div class="ad-placeholder">Advertisement</div>
+    </div>
+
+    <!-- How To Use -->
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>How to Use the Mortgage Calculator</h2>
+        <p>Our mortgage calculator makes it easy to estimate your monthly home loan payment. Follow these steps:</p>
+        <ol style="padding-left:1.5rem;color:var(--gray-700);line-height:2;">
+          <li><strong>Enter the home price</strong> — the total purchase price of the property.</li>
+          <li><strong>Enter your down payment</strong> — the amount you'll pay upfront (typically 3–20% of the home price).</li>
+          <li><strong>Enter the interest rate</strong> — the annual interest rate quoted by your lender.</li>
+          <li><strong>Select the loan term</strong> — typically 15 or 30 years.</li>
+          <li>Click <strong>Calculate</strong> to see your monthly payment, total interest, and total cost.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Formula -->
+    <section class="content-section">
+      <div class="container" style="max-width:800px;">
+        <h2>Mortgage Payment Formula</h2>
+        <p>The standard mortgage payment formula calculates your fixed monthly payment (M):</p>
+        <div class="formula-box">
+          M = P × [<span>r(1+r)ⁿ</span>] ÷ [<span>(1+r)ⁿ − 1</span>]
+        </div>
+        <p>Where: <strong>P</strong> = Loan principal, <strong>r</strong> = Monthly interest rate (annual rate ÷ 12), <strong>n</strong> = Total number of payments (years × 12)</p>
+        <p>For example, on a $280,000 loan at 6.5% for 30 years: r = 0.065/12 = 0.005417, n = 360. Monthly payment ≈ <strong>$1,770</strong>.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What is a good mortgage interest rate? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">A good mortgage rate depends on current market conditions. Historically, rates below 4% are excellent. In 2024–2026, rates in the 6–7% range are typical for 30-year fixed mortgages. Your credit score, loan size, and down payment all affect your rate. Always compare multiple lenders to find the best offer.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much house can I afford? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">A common guideline is the 28/36 rule: spend no more than 28% of your gross monthly income on housing costs and no more than 36% on total debt. For example, with a $6,000/month income, your target maximum housing payment would be $1,680/month. Many lenders allow up to a 43% debt-to-income ratio for approval.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the difference between principal and interest? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Principal is the original loan amount you borrowed. Interest is the cost the lender charges for lending you money, expressed as an annual percentage rate. In the early years of your mortgage, most of your payment goes toward interest. Over time, more goes toward principal. This is called amortization.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does the down payment affect my monthly payment? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">A larger down payment directly reduces your loan principal, which lowers your monthly payment and the total interest you'll pay over the life of the loan. A 20% down payment also eliminates the need for Private Mortgage Insurance (PMI), which typically adds 0.5%–1% of the loan amount per year to your costs.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is PMI (Private Mortgage Insurance)? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">PMI is insurance that protects the lender — not you — if you default on your loan. It's typically required when your down payment is less than 20% of the home's purchase price. PMI usually costs between 0.5% and 1.5% of the original loan amount annually. Once you reach 20% equity in your home, you can request to have PMI removed.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Calculators -->
+    <section class="content-section">
+      <div class="container">
+        <h2>Related Calculators</h2>
+        <div class="related-grid">
+          <a href="car-loan-calculator.html" class="related-card"><div class="icon">🚗</div>Car Loan Calculator</a>
+          <a href="compound-interest-calculator.html" class="related-card"><div class="icon">📈</div>Compound Interest</a>
+          <a href="retirement-calculator.html" class="related-card"><div class="icon">🏖️</div>Retirement Calculator</a>
+          <a href="savings-calculator.html" class="related-card"><div class="icon">💰</div>Savings Calculator</a>
+          <a href="budget-planner.html" class="related-card"><div class="icon">📊</div>Budget Planner</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a>
+          <p>Smart Tools for Smarter Money. Free financial calculators to help you plan, save, and grow your wealth.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators</h4>
+          <ul>
+            <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan Calculator</a></li>
+            <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+            <li><a href="retirement-calculator.html">Retirement</a></li>
+            <li><a href="debt-payoff-calculator.html">Debt Payoff</a></li>
+            <li><a href="credit-card-payoff-calculator.html">Credit Card</a></li>
+            <li><a href="savings-calculator.html">Savings</a></li>
+            <li><a href="bmi-calculator.html">BMI</a></li>
+            <li><a href="budget-planner.html">Budget Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#privacy">Privacy Policy</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Tools</h4>
+          <ul>
+            <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+            <li><a href="retirement-calculator.html">Retirement Calculator</a></li>
+            <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© 2026 FinCalcHub. All rights reserved. | These calculators are for educational purposes only and do not constitute financial advice.</div>
+    </div>
+  </footer>
+
+  <div class="ad-footer-wrap">
+    <div class="ad-container ad-footer"><div class="ad-placeholder">Advertisement</div></div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('mortgage-form').addEventListener('submit', function() {
+      document.getElementById('mortgage-placeholder').style.display = 'none';
+      document.getElementById('mortgage-result').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Calculator | How Much Do You Need to Retire? | FinCalcHub</title>
+  <meta name="description" content="Calculate how much you need to retire comfortably. Free retirement savings calculator — project your 401k, IRA, and investment balance with monthly contributions and returns.">
+  <meta name="keywords" content="retirement calculator, retirement savings calculator, 401k calculator, how much to retire, retirement planning calculator">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="FinCalcHub">
+  <link rel="canonical" href="https://fincalchub.github.io/retirement-calculator.html">
+  <meta property="og:title" content="Retirement Calculator | How Much Do You Need to Retire? | FinCalcHub">
+  <meta property="og:description" content="Calculate how much you need to retire comfortably. Project your retirement balance with our free calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincalchub.github.io/retirement-calculator.html">
+  <meta property="og:image" content="https://fincalchub.github.io/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retirement Calculator | FinCalcHub">
+  <meta name="twitter:description" content="Project your retirement savings and find out if you're on track to retire comfortably.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Retirement Calculator","description":"Project your retirement savings balance based on current savings, contributions, and expected returns.","url":"https://fincalchub.github.io/retirement-calculator.html","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"FinCalcHub"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much do I need to retire?","acceptedAnswer":{"@type":"Answer","text":"A common rule of thumb is the 25x rule: multiply your expected annual expenses in retirement by 25. For $50,000/year in expenses, you'd need $1,250,000 saved. This is based on the 4% safe withdrawal rate."}},{"@type":"Question","name":"What is the 4% rule in retirement?","acceptedAnswer":{"@type":"Answer","text":"The 4% rule states you can safely withdraw 4% of your retirement portfolio each year without running out of money over a 30-year retirement. It was derived from the Trinity Study analyzing historical stock and bond returns."}},{"@type":"Question","name":"When should I start saving for retirement?","acceptedAnswer":{"@type":"Answer","text":"As early as possible. Due to compound interest, starting at 25 vs 35 can result in double the retirement balance, even with the same total contributions. Every decade you delay roughly halves your final balance."}},{"@type":"Question","name":"How much should I contribute to my 401k?","acceptedAnswer":{"@type":"Answer","text":"At minimum, contribute enough to get your full employer match (typically 3-6% of salary) — that's free money. Financial advisors generally recommend saving 10-15% of your gross income for retirement, including employer contributions."}},{"@type":"Question","name":"What return rate should I assume for retirement planning?","acceptedAnswer":{"@type":"Answer","text":"Historically, a diversified stock portfolio has returned about 7% annually after inflation. For conservative planning, many advisors use 5-6% to account for fees and market variability. Use 7% for aggressive growth scenarios."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan</a></li>
+            <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+            <li><a href="retirement-calculator.html" class="active">Retirement</a></li>
+            <li><a href="debt-payoff-calculator.html">Debt Payoff</a></li>
+            <li><a href="savings-calculator.html">Savings</a></li>
+            <li><a href="bmi-calculator.html">BMI</a></li>
+            <li><a href="budget-planner.html">Budget</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+        <li><a href="car-loan-calculator.html">🚗 Car Loan</a></li>
+        <li><a href="compound-interest-calculator.html">📈 Compound Interest</a></li>
+        <li><a href="retirement-calculator.html">🏖️ Retirement</a></li>
+        <li><a href="debt-payoff-calculator.html">💸 Debt Payoff</a></li>
+        <li><a href="credit-card-payoff-calculator.html">💳 Credit Card</a></li>
+        <li><a href="savings-calculator.html">💰 Savings</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI</a></li>
+        <li><a href="budget-planner.html">📊 Budget</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="ad-container ad-header"><div class="ad-placeholder">Advertisement</div></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Retirement Calculator</h1>
+        <p>Project your retirement nest egg and find out if you're on track to retire when you want.</p>
+      </div>
+    </section>
+
+    <section class="calc-section">
+      <div class="container">
+        <div class="calc-layout">
+          <div class="calc-box">
+            <div class="calc-box-header"><h2>🏖️ Enter Retirement Details</h2></div>
+            <div class="calc-box-body">
+              <form id="ret-form" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="ret-current-age">Current Age</label>
+                  <input type="number" id="ret-current-age" class="form-control" placeholder="30" min="16" max="80" value="30">
+                  <div class="error-msg" id="ret-current-age-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ret-retirement-age">Retirement Age</label>
+                  <input type="number" id="ret-retirement-age" class="form-control" placeholder="65" min="17" max="90" value="65">
+                  <div class="error-msg" id="ret-retirement-age-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ret-current-savings">Current Retirement Savings</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="ret-current-savings" class="form-control has-prefix" placeholder="25,000" min="0" step="1000" value="25000">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ret-monthly-contrib">Monthly Contribution</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="ret-monthly-contrib" class="form-control has-prefix" placeholder="500" min="0" step="50" value="500">
+                  </div>
+                  <div class="error-msg" id="ret-monthly-contrib-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ret-return">Expected Annual Return</label>
+                  <div class="input-group">
+                    <input type="number" id="ret-return" class="form-control has-suffix" placeholder="7" min="0" max="30" step="0.5" value="7">
+                    <span class="input-suffix">%</span>
+                  </div>
+                  <div class="form-hint">Historical S&P 500 avg: ~10% (7% inflation-adjusted)</div>
+                  <div class="error-msg" id="ret-return-error"></div>
+                </div>
+                <button type="submit" class="calc-btn">Calculate Retirement Savings</button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="results-box hidden" id="ret-result"></div>
+            <div id="ret-placeholder" class="results-box" style="text-align:center;color:var(--gray-500);padding:3rem 1.75rem;">
+              <div style="font-size:3rem;margin-bottom:1rem;">🏖️</div>
+              <p style="margin:0;">Enter your details and click <strong>Calculate</strong> to project your retirement balance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-container ad-inline" style="text-align:center;padding:1.5rem 0;"><div class="ad-placeholder">Advertisement</div></div>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>How to Use the Retirement Calculator</h2>
+        <p>Enter your current age and target retirement age to set your timeline. Input your current retirement savings (401k, IRA, investments combined), your planned monthly contribution, and your expected annual investment return. The calculator projects your balance at retirement and estimates monthly income using the 4% withdrawal rule.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container" style="max-width:800px;">
+        <h2>Retirement Savings Formula</h2>
+        <div class="formula-box">
+          FV = PV × <span>(1+r)ⁿ</span> + PMT × [<span>(1+r)ⁿ − 1</span>] ÷ r
+        </div>
+        <p>Where: <strong>FV</strong> = Future value at retirement, <strong>PV</strong> = Present savings, <strong>r</strong> = Monthly return rate, <strong>n</strong> = Months until retirement, <strong>PMT</strong> = Monthly contribution</p>
+      </div>
+    </section>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">How much do I need to retire? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">A common rule of thumb is the 25x rule: multiply your expected annual retirement expenses by 25. If you plan to spend $60,000/year in retirement, you'd need $1,500,000 saved. This is based on the 4% safe withdrawal rate, which has historically sustained a 30-year retirement through most market conditions.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the 4% rule in retirement? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">The 4% rule states that you can safely withdraw 4% of your retirement portfolio in your first year of retirement, then adjust for inflation each year, without running out of money over a 30-year period. It was derived from the famous Trinity Study analyzing historical stock and bond returns from 1926 to 1995.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">When should I start saving for retirement? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">As early as possible. Due to compound interest, starting at 25 instead of 35 can result in more than double the retirement balance, even if you contribute the same amount each month. A 25-year-old saving $300/month at 7% will have about $900,000 by 65. A 35-year-old doing the same will have about $450,000.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much should I contribute to my 401k? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">At minimum, contribute enough to get your full employer match — that's essentially free money with an instant 50–100% return. Beyond that, financial advisors generally recommend saving 10–15% of your gross income for retirement, including employer contributions. In 2026, the 401k contribution limit is $23,500 (plus $7,500 catch-up if over 50).</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What return rate should I assume for retirement planning? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">For a diversified stock portfolio, historical average returns are about 10% nominal or 7% inflation-adjusted annually. For conservative planning, many advisors use 5–6% to account for fees and sequence-of-returns risk. Use 7% as a reasonable baseline. Always use lower rates as you approach retirement and shift to bonds.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Related Calculators</h2>
+        <div class="related-grid">
+          <a href="compound-interest-calculator.html" class="related-card"><div class="icon">📈</div>Compound Interest</a>
+          <a href="savings-calculator.html" class="related-card"><div class="icon">💰</div>Savings Calculator</a>
+          <a href="budget-planner.html" class="related-card"><div class="icon">📊</div>Budget Planner</a>
+          <a href="debt-payoff-calculator.html" class="related-card"><div class="icon">💸</div>Debt Payoff</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a><p>Smart Tools for Smarter Money.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="car-loan-calculator.html">Car Loan</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="savings-calculator.html">Savings</a></li><li><a href="budget-planner.html">Budget</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Popular</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 FinCalcHub. All rights reserved. | For educational purposes only.</div></div>
+  </footer>
+  <div class="ad-footer-wrap"><div class="ad-container ad-footer"><div class="ad-placeholder">Advertisement</div></div></div>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('ret-form').addEventListener('submit', function() {
+      document.getElementById('ret-placeholder').style.display = 'none';
+      document.getElementById('ret-result').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

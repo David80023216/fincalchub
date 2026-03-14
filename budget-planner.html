@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Monthly Budget Planner | Track Your Spending | FinCalcHub</title>
+  <meta name="description" content="Plan your monthly budget with our free interactive budget planner. Track income vs. expenses with a visual pie chart breakdown. No signup needed — plan your finances in minutes.">
+  <meta name="keywords" content="budget planner, monthly budget calculator, personal budget calculator, budget tracker, spending tracker, 50 30 20 budget">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="FinCalcHub">
+  <link rel="canonical" href="https://fincalchub.github.io/budget-planner.html">
+  <meta property="og:title" content="Free Monthly Budget Planner | Track Your Spending | FinCalcHub">
+  <meta property="og:description" content="Plan your monthly budget with a visual pie chart breakdown. Free interactive budget planner.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincalchub.github.io/budget-planner.html">
+  <meta property="og:image" content="https://fincalchub.github.io/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Monthly Budget Planner | FinCalcHub">
+  <meta name="twitter:description" content="Plan your monthly budget with interactive pie chart. Free budget planner tool.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Monthly Budget Planner","description":"Plan your monthly budget with an interactive pie chart breakdown.","url":"https://fincalchub.github.io/budget-planner.html","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"FinCalcHub"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan</a></li>
+            <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+            <li><a href="retirement-calculator.html">Retirement</a></li>
+            <li><a href="debt-payoff-calculator.html">Debt Payoff</a></li>
+            <li><a href="savings-calculator.html">Savings</a></li>
+            <li><a href="bmi-calculator.html">BMI</a></li>
+            <li><a href="budget-planner.html" class="active">Budget</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+        <li><a href="car-loan-calculator.html">🚗 Car Loan</a></li>
+        <li><a href="compound-interest-calculator.html">📈 Compound Interest</a></li>
+        <li><a href="retirement-calculator.html">🏖️ Retirement</a></li>
+        <li><a href="debt-payoff-calculator.html">💸 Debt Payoff</a></li>
+        <li><a href="credit-card-payoff-calculator.html">💳 Credit Card</a></li>
+        <li><a href="savings-calculator.html">💰 Savings</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI</a></li>
+        <li><a href="budget-planner.html">📊 Budget</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="ad-container ad-header"><div class="ad-placeholder">Advertisement</div></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Monthly Budget Planner</h1>
+        <p>Create your personal monthly budget in minutes. See exactly where your money goes with an interactive visual breakdown.</p>
+      </div>
+    </section>
+
+    <section class="calc-section">
+      <div class="container">
+        <div class="calc-layout">
+          <div class="calc-box">
+            <div class="calc-box-header"><h2>📊 Enter Your Budget</h2></div>
+            <div class="calc-box-body">
+              <form id="budget-form" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="budget-income">Monthly Income (after tax)</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="budget-income" class="form-control has-prefix" placeholder="5,000" min="1" step="100" value="5000">
+                  </div>
+                </div>
+                <p style="font-size:0.85rem;font-weight:700;color:var(--navy);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em;">Monthly Expenses</p>
+                <div class="form-group">
+                  <label class="form-label" for="budget-housing">🏠 Housing (rent/mortgage)</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="budget-housing" class="form-control has-prefix" placeholder="1,500" min="0" step="50" value="1500">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="budget-food">🍔 Food &amp; Dining</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="budget-food" class="form-control has-prefix" placeholder="600" min="0" step="25" value="600">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="budget-transport">🚗 Transportation</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="budget-transport" class="form-control has-prefix" placeholder="400" min="0" step="25" value="400">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="budget-entertainment">🎬 Entertainment</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="budget-entertainment" class="form-control has-prefix" placeholder="200" min="0" step="25" value="200">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="budget-savings">💰 Savings / Investments</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="budget-savings" class="form-control has-prefix" placeholder="500" min="0" step="25" value="500">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="budget-other">📦 Other Expenses</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="budget-other" class="form-control has-prefix" placeholder="300" min="0" step="25" value="300">
+                  </div>
+                </div>
+                <button type="submit" class="calc-btn">Create My Budget</button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="results-box hidden" id="budget-result"></div>
+            <div id="budget-placeholder" class="results-box" style="text-align:center;color:var(--gray-500);padding:3rem 1.75rem;">
+              <div style="font-size:3rem;margin-bottom:1rem;">📊</div>
+              <p style="margin:0;">Enter your income and expenses, then click <strong>Create My Budget</strong> to see your breakdown.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-container ad-inline" style="text-align:center;padding:1.5rem 0;"><div class="ad-placeholder">Advertisement</div></div>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>The 50/30/20 Budget Rule</h2>
+        <p>The 50/30/20 rule is a popular budgeting framework popularized by Senator Elizabeth Warren in her book "All Your Worth." It divides your after-tax income into three categories:</p>
+        <ul style="padding-left:1.5rem;color:var(--gray-700);line-height:2.2;">
+          <li><strong>50% — Needs:</strong> Housing, groceries, utilities, transportation, insurance, minimum debt payments</li>
+          <li><strong>30% — Wants:</strong> Dining out, entertainment, subscriptions, shopping, vacations</li>
+          <li><strong>20% — Savings &amp; Debt:</strong> Emergency fund, retirement savings, extra debt payments, investments</li>
+        </ul>
+        <p>This framework provides flexibility while ensuring you're saving enough for the future. Adjust the percentages to fit your specific situation — some financial advisors recommend 20% savings for younger earners with smaller expenses.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container" style="max-width:800px;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">How much of my income should go to housing? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">The traditional rule is to spend no more than 30% of your gross income on housing. However, in high-cost cities this may be unavoidable. Some financial experts use 28% of gross income as the maximum for housing costs (mortgage/rent + insurance + taxes). Try to keep housing under 35% to maintain financial flexibility.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I start budgeting if I've never done it before? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Start by tracking your spending for one month to understand where your money actually goes. Use our budget planner to set targets. Then automate: set up automatic transfers to savings on payday so you never have to think about it. Review your budget monthly and adjust as needed. The best budget is one you'll actually follow.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is zero-based budgeting? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Zero-based budgeting means assigning every dollar of income a specific purpose so that income minus expenses equals zero. You're not spending all your money — savings and investments count as expenses. This method forces intentional decisions about every dollar and is popular with people who want maximum control over their finances.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much should I save each month? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Financial advisors generally recommend saving at least 20% of your take-home pay. Start with building an emergency fund of 3–6 months of expenses, then focus on retirement (max out employer 401k match, then IRA). After that, save for specific goals. Even saving 10% is significantly better than nothing — start where you can and increase over time.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What should I do if I'm overspending my budget? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">First, identify the biggest overspending categories. Look for subscriptions you can cancel, reduce dining out, and find cheaper alternatives for recurring expenses. Consider increasing income through side work. Prioritize: cut wants before needs, and protect savings. It's also worth reviewing if your income is simply too low relative to your area's cost of living.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Related Calculators</h2>
+        <div class="related-grid">
+          <a href="savings-calculator.html" class="related-card"><div class="icon">💰</div>Savings Calculator</a>
+          <a href="debt-payoff-calculator.html" class="related-card"><div class="icon">💸</div>Debt Payoff</a>
+          <a href="retirement-calculator.html" class="related-card"><div class="icon">🏖️</div>Retirement Calculator</a>
+          <a href="mortgage-calculator.html" class="related-card"><div class="icon">🏠</div>Mortgage Calculator</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a><p>Smart Tools for Smarter Money.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="savings-calculator.html">Savings</a></li><li><a href="debt-payoff-calculator.html">Debt Payoff</a></li><li><a href="budget-planner.html">Budget Planner</a></li><li><a href="bmi-calculator.html">BMI</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Popular</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 FinCalcHub. All rights reserved. | For educational purposes only.</div></div>
+  </footer>
+  <div class="ad-footer-wrap"><div class="ad-container ad-footer"><div class="ad-placeholder">Advertisement</div></div></div>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('budget-form').addEventListener('submit', function() {
+      document.getElementById('budget-placeholder').style.display = 'none';
+      document.getElementById('budget-result').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

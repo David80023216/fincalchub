@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt Payoff Calculator | Get Out of Debt Faster | FinCalcHub</title>
+  <meta name="description" content="Calculate exactly when you'll be debt-free and how much interest you'll pay. Free debt payoff calculator — see your payoff date and total interest with any monthly payment amount.">
+  <meta name="keywords" content="debt payoff calculator, loan payoff calculator, debt calculator, when will I pay off my debt, debt free calculator">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="FinCalcHub">
+  <link rel="canonical" href="https://fincalchub.github.io/debt-payoff-calculator.html">
+  <meta property="og:title" content="Debt Payoff Calculator | Get Out of Debt Faster | FinCalcHub">
+  <meta property="og:description" content="Calculate exactly when you'll be debt-free. Free debt payoff calculator with payoff date and interest totals.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincalchub.github.io/debt-payoff-calculator.html">
+  <meta property="og:image" content="https://fincalchub.github.io/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Debt Payoff Calculator | FinCalcHub">
+  <meta name="twitter:description" content="Calculate exactly when you'll be debt-free and how much interest you'll pay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Debt Payoff Calculator","description":"Calculate when you'll be debt-free and total interest paid.","url":"https://fincalchub.github.io/debt-payoff-calculator.html","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"FinCalcHub"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan</a></li>
+            <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+            <li><a href="retirement-calculator.html">Retirement</a></li>
+            <li><a href="debt-payoff-calculator.html" class="active">Debt Payoff</a></li>
+            <li><a href="savings-calculator.html">Savings</a></li>
+            <li><a href="bmi-calculator.html">BMI</a></li>
+            <li><a href="budget-planner.html">Budget</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+        <li><a href="car-loan-calculator.html">🚗 Car Loan</a></li>
+        <li><a href="compound-interest-calculator.html">📈 Compound Interest</a></li>
+        <li><a href="retirement-calculator.html">🏖️ Retirement</a></li>
+        <li><a href="debt-payoff-calculator.html">💸 Debt Payoff</a></li>
+        <li><a href="credit-card-payoff-calculator.html">💳 Credit Card</a></li>
+        <li><a href="savings-calculator.html">💰 Savings</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI</a></li>
+        <li><a href="budget-planner.html">📊 Budget</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="ad-container ad-header"><div class="ad-placeholder">Advertisement</div></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Debt Payoff Calculator</h1>
+        <p>See exactly when you'll be debt-free and how much interest you'll save by paying more each month.</p>
+      </div>
+    </section>
+
+    <section class="calc-section">
+      <div class="container">
+        <div class="calc-layout">
+          <div class="calc-box">
+            <div class="calc-box-header"><h2>💸 Enter Debt Details</h2></div>
+            <div class="calc-box-body">
+              <form id="debt-form" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="debt-balance">Current Balance</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="debt-balance" class="form-control has-prefix" placeholder="10,000" min="1" step="100" value="10000">
+                  </div>
+                  <div class="error-msg" id="debt-balance-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="debt-rate">Annual Interest Rate</label>
+                  <div class="input-group">
+                    <input type="number" id="debt-rate" class="form-control has-suffix" placeholder="15" min="0" max="50" step="0.1" value="15">
+                    <span class="input-suffix">%</span>
+                  </div>
+                  <div class="error-msg" id="debt-rate-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="debt-payment">Monthly Payment</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="debt-payment" class="form-control has-prefix" placeholder="300" min="1" step="10" value="300">
+                  </div>
+                  <div class="form-hint">Must exceed monthly interest to reduce balance</div>
+                  <div class="error-msg" id="debt-payment-error"></div>
+                </div>
+                <button type="submit" class="calc-btn">Calculate Debt Payoff</button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="results-box hidden" id="debt-result"></div>
+            <div id="debt-placeholder" class="results-box" style="text-align:center;color:var(--gray-500);padding:3rem 1.75rem;">
+              <div style="font-size:3rem;margin-bottom:1rem;">💸</div>
+              <p style="margin:0;">Enter your debt details and click <strong>Calculate</strong> to see your payoff timeline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-container ad-inline" style="text-align:center;padding:1.5rem 0;"><div class="ad-placeholder">Advertisement</div></div>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>How to Pay Off Debt Faster</h2>
+        <p>The most effective debt payoff strategies are the <strong>Debt Avalanche</strong> (pay highest interest first) and the <strong>Debt Snowball</strong> (pay smallest balance first). Mathematically, the avalanche saves the most money; the snowball provides psychological momentum.</p>
+        <p>Increasing your payment by even $50–$100/month can save hundreds or thousands in interest and months off your payoff date. Try different payment amounts in the calculator to see the impact.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container" style="max-width:800px;">
+        <h2>Debt Payoff Formula</h2>
+        <div class="formula-box">
+          n = <span>−log(1 − (P × r / M))</span> ÷ <span>log(1 + r)</span>
+        </div>
+        <p>Where: <strong>n</strong> = Number of months to payoff, <strong>P</strong> = Balance, <strong>r</strong> = Monthly interest rate (APR ÷ 12), <strong>M</strong> = Monthly payment</p>
+      </div>
+    </section>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What is the fastest way to pay off debt? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">The fastest way is the Debt Avalanche method: list all debts by interest rate, make minimum payments on all, and put every extra dollar toward the highest-rate debt first. Once that's paid off, roll that payment to the next highest-rate debt. This minimizes total interest paid and gets you debt-free the fastest.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the debt snowball method? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">The Debt Snowball method focuses on paying off your smallest balance first, regardless of interest rate. While it costs more in interest than the avalanche method, it provides quick psychological wins that keep you motivated. Popularized by Dave Ramsey, it works well for people who need momentum to stay on track.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much does paying extra each month save? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Even small extra payments have a big impact. On a $10,000 debt at 15% interest, a minimum payment of $200/month takes 79 months and costs $5,700 in interest. Paying $300/month takes only 40 months and costs $2,700 in interest — saving $3,000 and 3+ years!</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Should I pay off debt or invest? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">If your debt interest rate is higher than your expected investment return, pay off debt first. High-interest debt (above 7–8%) should be paid off aggressively. For low-interest debt (below 4–5%), investing the difference may be mathematically better. Always prioritize getting any employer 401k match first — that's a guaranteed 50–100% return.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What happens if I only make minimum payments? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Minimum payments are designed to keep you in debt as long as possible, maximizing interest revenue for lenders. On a $5,000 credit card balance at 20% APR with 2% minimum payments, it takes over 30 years and costs more than $7,000 in interest to pay off. Always pay more than the minimum.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Related Calculators</h2>
+        <div class="related-grid">
+          <a href="credit-card-payoff-calculator.html" class="related-card"><div class="icon">💳</div>Credit Card Payoff</a>
+          <a href="budget-planner.html" class="related-card"><div class="icon">📊</div>Budget Planner</a>
+          <a href="savings-calculator.html" class="related-card"><div class="icon">💰</div>Savings Calculator</a>
+          <a href="mortgage-calculator.html" class="related-card"><div class="icon">🏠</div>Mortgage Calculator</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a><p>Smart Tools for Smarter Money.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="car-loan-calculator.html">Car Loan</a></li><li><a href="debt-payoff-calculator.html">Debt Payoff</a></li><li><a href="credit-card-payoff-calculator.html">Credit Card</a></li><li><a href="savings-calculator.html">Savings</a></li><li><a href="budget-planner.html">Budget</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Popular</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 FinCalcHub. All rights reserved. | For educational purposes only.</div></div>
+  </footer>
+  <div class="ad-footer-wrap"><div class="ad-container ad-footer"><div class="ad-placeholder">Advertisement</div></div></div>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('debt-form').addEventListener('submit', function() {
+      document.getElementById('debt-placeholder').style.display = 'none';
+      document.getElementById('debt-result').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

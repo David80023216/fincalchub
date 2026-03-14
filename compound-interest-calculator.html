@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest Calculator | Watch Your Money Grow | FinCalcHub</title>
+  <meta name="description" content="Calculate compound interest and see how your investment grows over time. Free compound interest calculator with yearly breakdown — choose your compounding frequency.">
+  <meta name="keywords" content="compound interest calculator, investment calculator, interest calculator, compound interest formula, savings growth calculator">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="FinCalcHub">
+  <link rel="canonical" href="https://fincalchub.github.io/compound-interest-calculator.html">
+  <meta property="og:title" content="Compound Interest Calculator | Watch Your Money Grow | FinCalcHub">
+  <meta property="og:description" content="See how your investments grow with compound interest. Free calculator with yearly breakdown.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincalchub.github.io/compound-interest-calculator.html">
+  <meta property="og:image" content="https://fincalchub.github.io/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compound Interest Calculator | FinCalcHub">
+  <meta name="twitter:description" content="Calculate compound interest and see how your investment grows over time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Compound Interest Calculator","description":"Calculate compound interest and see how your investment grows over time.","url":"https://fincalchub.github.io/compound-interest-calculator.html","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"FinCalcHub"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is compound interest?","acceptedAnswer":{"@type":"Answer","text":"Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, compound interest grows exponentially — your interest earns interest, creating a snowball effect over time."}},{"@type":"Question","name":"How often should interest compound?","acceptedAnswer":{"@type":"Answer","text":"The more frequently interest compounds, the more you earn. Daily compounding yields slightly more than monthly, which yields more than annually. For most savings accounts and investments, the difference between daily and monthly is small, but over decades it adds up."}},{"@type":"Question","name":"What is the Rule of 72?","acceptedAnswer":{"@type":"Answer","text":"The Rule of 72 is a simple formula to estimate how long it takes to double your money. Divide 72 by your annual interest rate. At 6% annual return, your money doubles in approximately 72/6 = 12 years."}},{"@type":"Question","name":"How does compound interest differ from simple interest?","acceptedAnswer":{"@type":"Answer","text":"Simple interest is calculated only on the principal. Compound interest is calculated on the principal plus any previously earned interest. Over long periods, compound interest results in significantly higher returns."}},{"@type":"Question","name":"What is a realistic compound interest rate?","acceptedAnswer":{"@type":"Answer","text":"The S&P 500 has historically averaged about 10% annually before inflation. High-yield savings accounts currently offer 4–5%. Certificates of deposit (CDs) may offer 4–6%. Your actual rate depends on your investment type and market conditions."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan</a></li>
+            <li><a href="compound-interest-calculator.html" class="active">Compound Interest</a></li>
+            <li><a href="retirement-calculator.html">Retirement</a></li>
+            <li><a href="debt-payoff-calculator.html">Debt Payoff</a></li>
+            <li><a href="savings-calculator.html">Savings</a></li>
+            <li><a href="bmi-calculator.html">BMI</a></li>
+            <li><a href="budget-planner.html">Budget</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+        <li><a href="car-loan-calculator.html">🚗 Car Loan</a></li>
+        <li><a href="compound-interest-calculator.html">📈 Compound Interest</a></li>
+        <li><a href="retirement-calculator.html">🏖️ Retirement</a></li>
+        <li><a href="debt-payoff-calculator.html">💸 Debt Payoff</a></li>
+        <li><a href="credit-card-payoff-calculator.html">💳 Credit Card</a></li>
+        <li><a href="savings-calculator.html">💰 Savings</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI</a></li>
+        <li><a href="budget-planner.html">📊 Budget</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="ad-container ad-header"><div class="ad-placeholder">Advertisement</div></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Compound Interest Calculator</h1>
+        <p>See the power of compounding — watch your money grow exponentially over time.</p>
+      </div>
+    </section>
+
+    <section class="calc-section">
+      <div class="container">
+        <div class="calc-layout">
+          <div class="calc-box">
+            <div class="calc-box-header"><h2>📈 Enter Investment Details</h2></div>
+            <div class="calc-box-body">
+              <form id="ci-form" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="ci-principal">Initial Principal</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="ci-principal" class="form-control has-prefix" placeholder="10,000" min="1" step="100" value="10000">
+                  </div>
+                  <div class="error-msg" id="ci-principal-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ci-rate">Annual Interest Rate</label>
+                  <div class="input-group">
+                    <input type="number" id="ci-rate" class="form-control has-suffix" placeholder="7" min="0.01" max="100" step="0.1" value="7">
+                    <span class="input-suffix">%</span>
+                  </div>
+                  <div class="error-msg" id="ci-rate-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ci-years">Number of Years</label>
+                  <input type="number" id="ci-years" class="form-control" placeholder="20" min="1" max="100" step="1" value="20">
+                  <div class="error-msg" id="ci-years-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="ci-freq">Compounding Frequency</label>
+                  <select id="ci-freq" class="form-control">
+                    <option value="1">Annually (1x/year)</option>
+                    <option value="2">Semi-Annually (2x/year)</option>
+                    <option value="4">Quarterly (4x/year)</option>
+                    <option value="12" selected>Monthly (12x/year)</option>
+                    <option value="365">Daily (365x/year)</option>
+                  </select>
+                </div>
+                <button type="submit" class="calc-btn">Calculate Compound Interest</button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="results-box hidden" id="ci-result"></div>
+            <div id="ci-placeholder" class="results-box" style="text-align:center;color:var(--gray-500);padding:3rem 1.75rem;">
+              <div style="font-size:3rem;margin-bottom:1rem;">📈</div>
+              <p style="margin:0;">Enter your investment details and click <strong>Calculate</strong> to see your growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-container ad-inline" style="text-align:center;padding:1.5rem 0;"><div class="ad-placeholder">Advertisement</div></div>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>How Compound Interest Works</h2>
+        <p>Compound interest is often called the "eighth wonder of the world" (attributed to Albert Einstein). Unlike simple interest, which only earns interest on your original principal, compound interest earns interest on your interest — creating exponential growth over time.</p>
+        <p>The key factors are: <strong>principal amount</strong>, <strong>interest rate</strong>, <strong>time</strong>, and <strong>compounding frequency</strong>. Of these, time is the most powerful — starting early makes an enormous difference.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container" style="max-width:800px;">
+        <h2>Compound Interest Formula</h2>
+        <div class="formula-box">
+          A = P × <span>(1 + r/n)^(n×t)</span>
+        </div>
+        <p>Where: <strong>A</strong> = Final amount, <strong>P</strong> = Principal, <strong>r</strong> = Annual interest rate (decimal), <strong>n</strong> = Compounding periods per year, <strong>t</strong> = Time in years</p>
+        <p>Example: $10,000 at 7% compounded monthly for 20 years: A = 10000 × (1 + 0.07/12)^(12×20) ≈ <strong>$40,064</strong></p>
+      </div>
+    </section>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What is compound interest? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, compound interest grows exponentially — your interest earns interest, creating a powerful snowball effect over time. This is why starting to invest early is so important.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How often should interest compound? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">The more frequently interest compounds, the more you earn. Daily compounding yields slightly more than monthly, which yields more than annually. The difference between daily and monthly compounding is small (fractions of a percent), but over decades it can add up to a meaningful amount.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the Rule of 72? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">The Rule of 72 is a quick mental math trick to estimate how long it takes to double your money. Simply divide 72 by your annual interest rate. At 6% annual return, your money doubles in approximately 72 ÷ 6 = 12 years. At 9%, it doubles in about 8 years.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does compound interest differ from simple interest? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Simple interest is calculated only on the original principal. Compound interest is calculated on the principal plus all previously earned interest. Over 30 years at 7%, $10,000 grows to about $17,000 with simple interest but over $76,000 with compound interest — that's the power of compounding.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is a realistic compound interest rate? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">The S&P 500 has historically averaged about 10% annually (7% inflation-adjusted). High-yield savings accounts currently offer 4–5%. CDs may offer 4–6%. Bond funds typically return 3–5%. Your actual rate depends on your investment type, risk tolerance, and market conditions.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Related Calculators</h2>
+        <div class="related-grid">
+          <a href="retirement-calculator.html" class="related-card"><div class="icon">🏖️</div>Retirement Calculator</a>
+          <a href="savings-calculator.html" class="related-card"><div class="icon">💰</div>Savings Calculator</a>
+          <a href="mortgage-calculator.html" class="related-card"><div class="icon">🏠</div>Mortgage Calculator</a>
+          <a href="budget-planner.html" class="related-card"><div class="icon">📊</div>Budget Planner</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a><p>Smart Tools for Smarter Money.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="car-loan-calculator.html">Car Loan</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="savings-calculator.html">Savings</a></li><li><a href="budget-planner.html">Budget</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Popular</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 FinCalcHub. All rights reserved. | For educational purposes only.</div></div>
+  </footer>
+  <div class="ad-footer-wrap"><div class="ad-container ad-footer"><div class="ad-placeholder">Advertisement</div></div></div>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('ci-form').addEventListener('submit', function() {
+      document.getElementById('ci-placeholder').style.display = 'none';
+      document.getElementById('ci-result').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

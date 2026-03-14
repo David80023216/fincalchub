@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator | Body Mass Index Calculator | FinCalcHub</title>
+  <meta name="description" content="Calculate your Body Mass Index (BMI) instantly using imperial or metric measurements. Free BMI calculator with health category indicator — underweight, normal, overweight, or obese.">
+  <meta name="keywords" content="BMI calculator, body mass index calculator, calculate BMI, BMI chart, healthy BMI range, BMI for adults">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="FinCalcHub">
+  <link rel="canonical" href="https://fincalchub.github.io/bmi-calculator.html">
+  <meta property="og:title" content="BMI Calculator | Body Mass Index Calculator | FinCalcHub">
+  <meta property="og:description" content="Calculate your BMI instantly in imperial or metric. Free BMI calculator with health category indicator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincalchub.github.io/bmi-calculator.html">
+  <meta property="og:image" content="https://fincalchub.github.io/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BMI Calculator | FinCalcHub">
+  <meta name="twitter:description" content="Calculate your Body Mass Index instantly. Free BMI calculator with health category.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","description":"Calculate your Body Mass Index (BMI) in imperial or metric measurements.","url":"https://fincalchub.github.io/bmi-calculator.html","applicationCategory":"HealthApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"FinCalcHub"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan</a></li>
+            <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+            <li><a href="retirement-calculator.html">Retirement</a></li>
+            <li><a href="debt-payoff-calculator.html">Debt Payoff</a></li>
+            <li><a href="savings-calculator.html">Savings</a></li>
+            <li><a href="bmi-calculator.html" class="active">BMI</a></li>
+            <li><a href="budget-planner.html">Budget</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+        <li><a href="car-loan-calculator.html">🚗 Car Loan</a></li>
+        <li><a href="compound-interest-calculator.html">📈 Compound Interest</a></li>
+        <li><a href="retirement-calculator.html">🏖️ Retirement</a></li>
+        <li><a href="debt-payoff-calculator.html">💸 Debt Payoff</a></li>
+        <li><a href="credit-card-payoff-calculator.html">💳 Credit Card</a></li>
+        <li><a href="savings-calculator.html">💰 Savings</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI</a></li>
+        <li><a href="budget-planner.html">📊 Budget</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="ad-container ad-header"><div class="ad-placeholder">Advertisement</div></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>BMI Calculator</h1>
+        <p>Calculate your Body Mass Index instantly — supports both imperial (lbs/ft) and metric (kg/cm) measurements.</p>
+      </div>
+    </section>
+
+    <section class="calc-section">
+      <div class="container">
+        <div class="calc-layout">
+          <div class="calc-box">
+            <div class="calc-box-header"><h2>⚖️ Calculate Your BMI</h2></div>
+            <div class="calc-box-body">
+              <div class="toggle-group">
+                <button type="button" class="toggle-btn active" data-unit="imperial">🇺🇸 Imperial (lbs/ft)</button>
+                <button type="button" class="toggle-btn" data-unit="metric">🌍 Metric (kg/cm)</button>
+              </div>
+              <form id="bmi-form" novalidate>
+                <!-- Imperial Inputs -->
+                <div id="bmi-imperial-inputs">
+                  <div class="form-group">
+                    <label class="form-label" for="bmi-weight-lbs">Weight (pounds)</label>
+                    <div class="input-group">
+                      <input type="number" id="bmi-weight-lbs" class="form-control has-suffix" placeholder="160" min="1" max="1000" step="0.5" value="160">
+                      <span class="input-suffix">lbs</span>
+                    </div>
+                  </div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+                    <div class="form-group">
+                      <label class="form-label" for="bmi-height-ft">Height (feet)</label>
+                      <div class="input-group">
+                        <input type="number" id="bmi-height-ft" class="form-control has-suffix" placeholder="5" min="1" max="9" step="1" value="5">
+                        <span class="input-suffix">ft</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="bmi-height-in">Inches</label>
+                      <div class="input-group">
+                        <input type="number" id="bmi-height-in" class="form-control has-suffix" placeholder="10" min="0" max="11" step="1" value="10">
+                        <span class="input-suffix">in</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Metric Inputs -->
+                <div id="bmi-metric-inputs" style="display:none;">
+                  <div class="form-group">
+                    <label class="form-label" for="bmi-weight-kg">Weight (kilograms)</label>
+                    <div class="input-group">
+                      <input type="number" id="bmi-weight-kg" class="form-control has-suffix" placeholder="70" min="1" max="500" step="0.5">
+                      <span class="input-suffix">kg</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="bmi-height-cm">Height (centimeters)</label>
+                    <div class="input-group">
+                      <input type="number" id="bmi-height-cm" class="form-control has-suffix" placeholder="175" min="50" max="300" step="0.5">
+                      <span class="input-suffix">cm</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="calc-btn">Calculate BMI</button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="results-box hidden" id="bmi-result"></div>
+            <div id="bmi-placeholder" class="results-box" style="text-align:center;color:var(--gray-500);padding:3rem 1.75rem;">
+              <div style="font-size:3rem;margin-bottom:1rem;">⚖️</div>
+              <p style="margin:0;">Enter your height and weight, then click <strong>Calculate</strong> to see your BMI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-container ad-inline" style="text-align:center;padding:1.5rem 0;"><div class="ad-placeholder">Advertisement</div></div>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>BMI Categories &amp; What They Mean</h2>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+            <thead>
+              <tr style="background:var(--navy);color:white;">
+                <th style="padding:10px 12px;text-align:left;">BMI Range</th>
+                <th style="padding:10px 12px;text-align:left;">Category</th>
+                <th style="padding:10px 12px;text-align:left;">Health Risk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:#dbeafe;">
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;">Below 18.5</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;font-weight:600;color:#1e40af;">Underweight</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;">Increased risk</td>
+              </tr>
+              <tr style="background:#dcfce7;">
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;">18.5 – 24.9</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;font-weight:600;color:#166534;">Normal Weight</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;">Lowest risk</td>
+              </tr>
+              <tr style="background:#fef9c3;">
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;">25.0 – 29.9</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;font-weight:600;color:#854d0e;">Overweight</td>
+                <td style="padding:8px 12px;border-bottom:1px solid #e9ecef;">Increased risk</td>
+              </tr>
+              <tr style="background:#fee2e2;">
+                <td style="padding:8px 12px;">30.0 and above</td>
+                <td style="padding:8px 12px;font-weight:600;color:#991b1b;">Obese</td>
+                <td style="padding:8px 12px;">High risk</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:0.85rem;color:var(--gray-500);margin-top:1rem;">Note: BMI is a screening tool, not a diagnostic tool. It doesn't account for muscle mass, bone density, age, or distribution of fat. Consult a healthcare professional for a complete health assessment.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container" style="max-width:800px;">
+        <h2>BMI Formula</h2>
+        <div class="formula-box">
+          BMI (metric) = <span>weight (kg)</span> ÷ <span>height² (m²)</span>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          BMI (imperial) = <span>703 × weight (lbs)</span> ÷ <span>height² (in²)</span>
+        </div>
+        <p>Example: A person who is 5'10" (70 inches) and weighs 160 lbs: BMI = 703 × 160 ÷ (70²) = 703 × 160 ÷ 4900 ≈ <strong>22.9</strong> (Normal Weight)</p>
+      </div>
+    </section>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">Is BMI an accurate measure of health? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">BMI is a useful population-level screening tool but has significant limitations for individuals. It doesn't distinguish between muscle and fat mass — a muscular athlete may have a "overweight" BMI while being very healthy. It also doesn't account for age, sex, ethnicity, or where body fat is distributed. For a complete health picture, consult your doctor.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is a healthy BMI for adults? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">For adults 20 and older, the CDC defines a healthy BMI as 18.5–24.9. However, the optimal range can vary by age, sex, and ethnicity. Some research suggests that for older adults (65+), a BMI of 22–27 may be associated with better outcomes. Asian populations may have increased health risks at lower BMI thresholds.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How can I lower my BMI? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">To lower BMI (reduce body fat), focus on: creating a moderate calorie deficit through diet and exercise, regular aerobic exercise (150+ min/week), strength training to preserve muscle, adequate sleep (7–9 hours), and reducing processed foods. Gradual, sustainable changes of 0.5–1 lb per week are more effective than crash diets.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Does BMI apply to children? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">BMI is calculated differently for children and teens (ages 2–19). For children, BMI is plotted on age- and sex-specific growth charts to get a BMI-for-age percentile. Below the 5th percentile is underweight; 5th–84th is healthy weight; 85th–94th is overweight; 95th percentile or above is obese. This calculator is designed for adults only.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the difference between overweight and obese? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Overweight (BMI 25–29.9) means a person has excess body weight for their height, which may increase health risks. Obese (BMI 30+) indicates a higher amount of excess body fat that significantly increases risk for conditions like type 2 diabetes, heart disease, hypertension, sleep apnea, and certain cancers. Obesity is further classified as Class I (30–34.9), Class II (35–39.9), and Class III (40+).</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Related Calculators</h2>
+        <div class="related-grid">
+          <a href="budget-planner.html" class="related-card"><div class="icon">📊</div>Budget Planner</a>
+          <a href="savings-calculator.html" class="related-card"><div class="icon">💰</div>Savings Calculator</a>
+          <a href="retirement-calculator.html" class="related-card"><div class="icon">🏖️</div>Retirement Calculator</a>
+          <a href="mortgage-calculator.html" class="related-card"><div class="icon">🏠</div>Mortgage Calculator</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a><p>Smart Tools for Smarter Money.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="savings-calculator.html">Savings</a></li><li><a href="bmi-calculator.html">BMI</a></li><li><a href="debt-payoff-calculator.html">Debt Payoff</a></li><li><a href="budget-planner.html">Budget</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Popular</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 FinCalcHub. All rights reserved. | For informational purposes only — consult a healthcare professional for medical advice.</div></div>
+  </footer>
+  <div class="ad-footer-wrap"><div class="ad-container ad-footer"><div class="ad-placeholder">Advertisement</div></div></div>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('bmi-form').addEventListener('submit', function() {
+      document.getElementById('bmi-placeholder').style.display = 'none';
+      document.getElementById('bmi-result').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

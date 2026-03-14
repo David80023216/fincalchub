@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Calculator | How Much Will You Save? | FinCalcHub</title>
+  <meta name="description" content="Calculate how much your savings will grow with regular contributions and compound interest. Free savings calculator — see your final balance, total deposits, and total interest earned.">
+  <meta name="keywords" content="savings calculator, savings account calculator, money savings calculator, how much will I save, savings growth calculator">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="FinCalcHub">
+  <link rel="canonical" href="https://fincalchub.github.io/savings-calculator.html">
+  <meta property="og:title" content="Savings Calculator | How Much Will You Save? | FinCalcHub">
+  <meta property="og:description" content="Calculate how your savings grow with regular contributions. Free savings calculator with full breakdown.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincalchub.github.io/savings-calculator.html">
+  <meta property="og:image" content="https://fincalchub.github.io/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Savings Calculator | FinCalcHub">
+  <meta name="twitter:description" content="Calculate how much your savings will grow over time with compound interest.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Savings Calculator","description":"Calculate how much your savings will grow with regular contributions and compound interest.","url":"https://fincalchub.github.io/savings-calculator.html","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"FinCalcHub"}}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mortgage-calculator.html">Mortgage</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan</a></li>
+            <li><a href="compound-interest-calculator.html">Compound Interest</a></li>
+            <li><a href="retirement-calculator.html">Retirement</a></li>
+            <li><a href="debt-payoff-calculator.html">Debt Payoff</a></li>
+            <li><a href="savings-calculator.html" class="active">Savings</a></li>
+            <li><a href="bmi-calculator.html">BMI</a></li>
+            <li><a href="budget-planner.html">Budget</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+        <li><a href="car-loan-calculator.html">🚗 Car Loan</a></li>
+        <li><a href="compound-interest-calculator.html">📈 Compound Interest</a></li>
+        <li><a href="retirement-calculator.html">🏖️ Retirement</a></li>
+        <li><a href="debt-payoff-calculator.html">💸 Debt Payoff</a></li>
+        <li><a href="credit-card-payoff-calculator.html">💳 Credit Card</a></li>
+        <li><a href="savings-calculator.html">💰 Savings</a></li>
+        <li><a href="bmi-calculator.html">⚖️ BMI</a></li>
+        <li><a href="budget-planner.html">📊 Budget</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="ad-container ad-header"><div class="ad-placeholder">Advertisement</div></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Savings Calculator</h1>
+        <p>See exactly how much your savings will grow over time with regular contributions and compound interest.</p>
+      </div>
+    </section>
+
+    <section class="calc-section">
+      <div class="container">
+        <div class="calc-layout">
+          <div class="calc-box">
+            <div class="calc-box-header"><h2>💰 Enter Savings Details</h2></div>
+            <div class="calc-box-body">
+              <form id="sav-form" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="sav-initial">Initial Deposit</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="sav-initial" class="form-control has-prefix" placeholder="1,000" min="0" step="100" value="1000">
+                  </div>
+                  <div class="error-msg" id="sav-initial-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="sav-monthly">Monthly Contribution</label>
+                  <div class="input-group">
+                    <span class="input-prefix">$</span>
+                    <input type="number" id="sav-monthly" class="form-control has-prefix" placeholder="200" min="0" step="50" value="200">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="sav-rate">Annual Interest Rate</label>
+                  <div class="input-group">
+                    <input type="number" id="sav-rate" class="form-control has-suffix" placeholder="4.5" min="0" max="30" step="0.1" value="4.5">
+                    <span class="input-suffix">%</span>
+                  </div>
+                  <div class="form-hint">High-yield savings: ~4–5% | S&P 500 avg: ~10%</div>
+                  <div class="error-msg" id="sav-rate-error"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="sav-years">Number of Years</label>
+                  <input type="number" id="sav-years" class="form-control" placeholder="10" min="1" max="100" step="1" value="10">
+                  <div class="error-msg" id="sav-years-error"></div>
+                </div>
+                <button type="submit" class="calc-btn">Calculate Savings Growth</button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="results-box hidden" id="sav-result"></div>
+            <div id="sav-placeholder" class="results-box" style="text-align:center;color:var(--gray-500);padding:3rem 1.75rem;">
+              <div style="font-size:3rem;margin-bottom:1rem;">💰</div>
+              <p style="margin:0;">Enter your savings details and click <strong>Calculate</strong> to see your growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ad-container ad-inline" style="text-align:center;padding:1.5rem 0;"><div class="ad-placeholder">Advertisement</div></div>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>How to Grow Your Savings Faster</h2>
+        <p>The three keys to growing savings are: <strong>start early</strong> (time is your biggest asset), <strong>contribute consistently</strong> (automation helps), and <strong>maximize your interest rate</strong> (high-yield savings accounts and index funds offer much better returns than traditional savings accounts).</p>
+        <p>Even small, consistent contributions compound dramatically over time. Saving $200/month at 5% for 30 years grows to over $166,000 — with only $72,000 in contributions.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container" style="max-width:800px;">
+        <h2>Savings Growth Formula</h2>
+        <div class="formula-box">
+          FV = P×<span>(1+r)ⁿ</span> + PMT×[<span>(1+r)ⁿ − 1</span>÷r]
+        </div>
+        <p>Where: <strong>FV</strong> = Final balance, <strong>P</strong> = Initial deposit, <strong>r</strong> = Monthly rate (APR ÷ 12), <strong>n</strong> = Months, <strong>PMT</strong> = Monthly contribution</p>
+      </div>
+    </section>
+
+    <section class="content-section section-alt">
+      <div class="container" style="max-width:800px;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">What is a high-yield savings account? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">A high-yield savings account (HYSA) is an FDIC-insured savings account that pays significantly higher interest than a traditional savings account. Traditional banks pay 0.01–0.1% APY, while online HYSAs currently offer 4–5% APY. Over years, this difference is enormous — $10,000 at 0.01% grows to $10,010 in 10 years; at 4.5%, it grows to about $15,530.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How much should I have in savings? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Financial experts recommend: (1) An emergency fund of 3–6 months of expenses in a liquid savings account; (2) Specific savings for near-term goals like a car or vacation; (3) Long-term savings for retirement in tax-advantaged accounts. The exact amounts depend on your income, expenses, and goals.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is it better to save monthly or lump sum? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Research consistently shows that lump-sum investing beats monthly contributions about 67% of the time, because money in the market longer earns more. However, regular monthly contributions (dollar-cost averaging) reduce timing risk and are more realistic for most people. Both are far better than not saving at all.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What is the best savings account interest rate? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">In 2026, high-yield savings accounts from online banks typically offer 4–5% APY. Money market accounts may offer similar rates. Certificates of deposit (CDs) can offer higher rates for locking in money for 6 months to 5 years. Compare current rates at financial comparison sites like Bankrate or NerdWallet.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How does compound interest help savings? <span class="faq-icon">+</span></button>
+            <div class="faq-answer">Compound interest means you earn interest on your interest, not just on your original deposit. This creates exponential growth over time. For example, $5,000 at 5% compound interest grows to $8,144 in 10 years, $13,267 in 20 years, and $21,610 in 30 years — more than 4x the original amount without any additional contributions.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <h2>Related Calculators</h2>
+        <div class="related-grid">
+          <a href="compound-interest-calculator.html" class="related-card"><div class="icon">📈</div>Compound Interest</a>
+          <a href="retirement-calculator.html" class="related-card"><div class="icon">🏖️</div>Retirement Calculator</a>
+          <a href="budget-planner.html" class="related-card"><div class="icon">📊</div>Budget Planner</a>
+          <a href="debt-payoff-calculator.html" class="related-card"><div class="icon">💸</div>Debt Payoff</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">F</div><span class="logo-text">Fin<span>Calc</span>Hub</span></a><p>Smart Tools for Smarter Money.</p></div>
+        <div class="footer-col"><h4>Calculators</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="savings-calculator.html">Savings</a></li><li><a href="debt-payoff-calculator.html">Debt Payoff</a></li><li><a href="budget-planner.html">Budget</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="about.html#privacy">Privacy</a></li><li><a href="about.html#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Popular</h4><ul><li><a href="mortgage-calculator.html">Mortgage</a></li><li><a href="retirement-calculator.html">Retirement</a></li><li><a href="compound-interest-calculator.html">Compound Interest</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 FinCalcHub. All rights reserved. | For educational purposes only.</div></div>
+  </footer>
+  <div class="ad-footer-wrap"><div class="ad-container ad-footer"><div class="ad-placeholder">Advertisement</div></div></div>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('sav-form').addEventListener('submit', function() {
+      document.getElementById('sav-placeholder').style.display = 'none';
+      document.getElementById('sav-result').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
