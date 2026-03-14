@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://fincalchub.github.io/sitemap.xml
+Sitemap: https://david80023216.github.io/fincalchub/sitemap.xml
